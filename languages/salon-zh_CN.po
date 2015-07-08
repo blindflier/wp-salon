@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 沙龙报名插件1.0\n"
+"POT-Creation-Date: 2014-09-09 20:13+0800\n"
+"PO-Revision-Date: 2014-09-09 20:14+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: /Users/jason/www/wordpress/wp-content/plugins/salon/\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: /Users/jason/www/wordpress/wp-content/plugins/salon\n"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:348
+msgid "Salon Type"
+msgstr "活动类型"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:349
+msgid "Salon Subject"
+msgstr "主题"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:350
+msgid "Salon Time"
+msgstr "活动时间"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:351
+msgid "Salon Address"
+msgstr "活动地址"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:352
+msgid "Salon Emcee"
+msgstr "主持人"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:353
+msgid "Salon Class"
+msgstr "护持班级"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:354
+msgid "Salon Status"
+msgstr "活动状态"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:355
+msgid "Salon Export"
+msgstr "沙龙导出"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:361
+msgid "Salon Register Name"
+msgstr "姓名"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:362
+msgid "Salon Register Mobile"
+msgstr "手机"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:363
+msgid "Salon Register Email"
+msgstr "邮箱"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:364
+msgid "Salon Register Send SMS"
+msgstr "发送短信"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:365
+msgid "Salon Register Send Email"
+msgstr "发送邮件"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:366
+msgid "Salon Sign In"
+msgstr "沙龙签到"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:391
+msgid "Salon Status Opened"
+msgstr "开放报名"
+
+#: /Users/jason/www/wordpress/wp-content/plugins/salon/salon.php:392
+msgid "Salon Status Closed"
+msgstr "关闭报名"
+
+#~ msgid "Salon Register Telephone"
+#~ msgstr "电话"
+
+#~ msgid "Time"
+#~ msgstr "时间"

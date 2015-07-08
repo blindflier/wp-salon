@@ -1,0 +1,153 @@
+@CHARSET "UTF-8";
+
+.req{color:#F00;}
+.sendmail  input[type=text],
+.sendmail  textarea
+{width:60%}
+
+.sendmail input[type=submit]{width:20%;}
+.message {color:red}
+
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0;
+    left: 0;
+    right:0;
+   	bottom:0;
+    background: #000;
+    display: none;
+}
+
+
+.window{
+	width: 500px;
+	padding-bottom: 2px;
+	display: none;
+	opacity: 1;
+	background: #FFF;
+	border-radius: 5px;
+	position:fixed;
+	z-index:2;
+	left: 50%;
+	margin-left: -250px;
+
+}
+.option-form{
+	width:100%;
+}
+.option-form .form-group {
+	width:100%;
+	
+}
+.option-form .form-group label{padding:0 20px;float:none}
+.option-form .form-group textarea,
+.option-form .form-group input[type=text]{width:50%;float:none;} 
+.option-form .button-group button{
+	float:left;
+}
+.window .title{
+	padding:15px 20px;
+	border-top-right-radius : 5px; 
+	border-top-left-radius :5px;
+	background-color:#eee;
+	border-bottom: 1px solid #CCC;
+}
+.window .title h2{
+	margin:0;padding:0;
+}
+
+.window .modal_close {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	display: block;
+	width: 14px;
+	height: 14px;
+	background: url(../images/modal_close.png);
+	z-index: 2;
+}
+
+.form-group{
+	
+	border-bottom: 1px solid #EEE;
+}
+.form-group, .button-group{
+	position: relative;
+	width: 464px;
+	padding: 14px 20px;
+}
+
+.clearfix{
+	display: inline-table; 
+}
+.clearfix:after {
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
+
+.form-group label {
+	width:110px;
+	vertical-align: middle;
+}
+.form-group input[type=text],.form-group textarea{
+	text-align:left;
+	width:380px;
+	vertical-align: top;
+	float:right;
+}
+.form-group:after{clear:both}
+
+.button-group button{
+	width:100px;float:right;
+}
+
+#salon-mask{
+ 	position:fixed;
+ 	top:0;left:0;
+ 	right:0;bottom:0;
+ 	z-index:12000;
+ 	background-color: rgba(0,0,0,0);
+ 	display:none;
+}
+#salon-mask .loading{
+	position:fixed;
+	display:block;
+	width:32px;
+	height:32px;
+	left:50%;
+	margin-left:-16px;
+	margin-top:-16px;
+}
+
+table.sms {
+	font-family: verdana,arial,sans-serif;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	width:90%;
+	text-align:center;
+	margin-top:20px;
+}
+table.sms th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.sms td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	color:#eee
+}
+
+table.sms tr.success td{background-color:#008f72;}
+table.sms tr.failed td{background-color:#bf86a6;}
