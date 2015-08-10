@@ -65,11 +65,12 @@
 								errors.push('姓名太短');
 							break;
 						case 'mobile':
-							if (!val.match(/1\d{10}/))
+							if (!val.match(/^1\d{10}$/))
 								errors.push('请填写1开头的11位有效手机号码');
 							break;
 						case 'classseq':
-							if (parseInt(val)<=0 ||parseInt(val) > 200 )
+							if (!val.match(/^\d+$/) ||
+								parseInt(val)<=0 ||parseInt(val) > 200 )
 								errors.push('请填写1-200以内的班级编号');
 							break;
 						case 'position':
@@ -82,7 +83,7 @@
 								errors.push('请填写义工岗位');
 							break;
 						case 'idcode':
-							if (!val.match(/\d{17}\w/))
+							if (!val.match(/^\d{17}\w$/))
 								errors.push('请填写有效身份证号码');
 							break;
 
