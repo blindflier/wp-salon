@@ -62,7 +62,7 @@
 		  $.post(elem.data('target'),{
 			'id' : elem.data('id'),
 			'sign_in' : (elem.attr('checked') ? 1 : 0) ,
-			'action' : elem.data('action'),
+			'action' : elem.data('action')
 		  },function(responseText,statusText, xhr ){
 			  try{
 					var data = JSON.parse(responseText);
@@ -82,7 +82,7 @@
 		  $.post(elem.data('target'),{
 			'id' : elem.data('id'),
 			'opening' : (elem.attr('checked') ? 1 : 0) ,
-			'action' : elem.data('action'),
+			'action' : elem.data('action')
 		  },function(responseText,statusText, xhr ){
 			  try{
 					var data = JSON.parse(responseText);

@@ -1,10 +1,5 @@
 <?php
-/**
- * Template Name: 活动注册模板
- * User: jason
- * Date: 14-6-21
- * Time: 下午9:44
- */
+
 
 $salon_id = (int)$_REQUEST['salon_id'];
 

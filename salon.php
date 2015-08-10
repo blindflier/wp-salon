@@ -26,6 +26,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 define(POST_TYPE_SALON,"salon");
 define(POST_TYPE_SALON_REGISTER,"salon-register");
+define(POST_TYPE_TRAINING_REGISTER,"training-register");
 
 require_once  dirname(__FILE__) . '/includes/salon-register.php';
 
@@ -443,6 +444,27 @@ function salon_register_post_type(){
         'menu_position' => 5
 	);
     register_post_type(POST_TYPE_SALON_REGISTER,$args);
+
+	$labels = array(
+		'name'          =>  '培训报名信息',
+		'add_new'       =>  '新增培训报名信息',
+		'add_new_item'  =>  '新增培训报名信息',
+		'edit_item'     =>  '修改培训报名信息',
+		'new_item'      =>  '新培训报名信息',
+		'all_items'     =>  '所有培训报名信息',
+		'view_item'     =>  '查看',
+		'search_items'  =>  '搜索培训报名信息',
+		'not_found'     =>  '没有发现培训报名信息',
+		'not_found_in_trash'    =>  '回收站里没有发现培训报名信息'
+	);
+
+	$args = array(
+		'labels'     => $labels,
+		'show_ui'    => true,
+		'show_in_menu' => true,
+		'menu_position' => 6
+	);
+	register_post_type(POST_TYPE_TRAINING_REGISTER,$args);
 }
 function salon_register_taxonomy_type(){
     $labels = array(
