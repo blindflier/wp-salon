@@ -124,7 +124,7 @@ if ($salon) {
                         class="left">11日晚</span>
                     <input type="checkbox" class="autowidth lodge" name="lodge[]" value="12日晚"/> <span
                         class="left">12日晚</span>
-                    <input type="checkbox" class="autowidth" id="nolodge" name="lodge[]" value="不住宿" checked="checked"/> <span
+                    <input type="checkbox" class="autowidth" id="nolodge" name="lodge[]" value="不住宿" /> <span
                         class="left">不住宿</span>
                 </div>
 
@@ -133,7 +133,7 @@ if ($salon) {
                     <input type="checkbox" class="autowidth food" name="food[]" value="12日午餐"/> <span class="left">12日午餐</span>
                     <input type="checkbox" class="autowidth food" name="food[]" value="12日晚餐"/> <span class="left">12日晚餐</span>
                     <input type="checkbox" class="autowidth food" name="food[]" value="13日午餐"/> <span class="left">13日午餐</span>
-                    <input type="checkbox" class="autowidth" id="nofood" name="food[]" value="不用餐" checked="checked"/>
+                    <input type="checkbox" class="autowidth" id="nofood" name="food[]" value="不用餐" />
                     <span class="left">不用餐</span>
                 </div>
 
