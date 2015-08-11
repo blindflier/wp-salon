@@ -40,6 +40,7 @@ if ($salon) {
                 <div class="row form-group">
                     <label for="area">修学处<span class="red">*</span></label>
                     <select name="area" id="area" required>
+                        <option selected disabled hidden value=''></option>
                         <option value="上海">上海</option>
                         <option value="厦门">厦门</option>
                         <option value="苏州">苏州</option>
@@ -50,13 +51,14 @@ if ($salon) {
 
                 <div class="row form-group">
                     <label for="city" class="">地区<span class="red">*</span></label>
-                    <input type="text" id="city" name="city" value="上海" required>
+                    <input type="text" id="city" name="city" required>
                 </div>
                 <div class="row form-group">
                     <label for="classtype" class="">班级类型<span class="red">*</span></label>
                     <select name="classtype" required>
+                        <option selected disabled hidden value=''></option>
                         <option value="同喜">同喜</option>
-                        <option value="同修" selected="selected">同修</option>
+                        <option value="同修">同修</option>
                         <option value="同德">同德</option>
                     </select>
 
@@ -79,8 +81,9 @@ if ($salon) {
                 <div class="form-group row">
                     <label for="gender">性别<span class="red">*</span></label>
                     <select name="gender" class="form-control">
+                        <option selected disabled hidden value=''></option>
                         <option value="男">男</option>
-                        <option value="女" selected="selected">女</option>
+                        <option value="女"">女</option>
                     </select>
                 </div>
                 <div class="form-group row">
@@ -96,10 +99,11 @@ if ($salon) {
                 <div class="form-group row">
                     <label for="position">义工岗位<span class="red">*</span></label>
                     <select name="position" id="position" required>
+                        <option selected disabled hidden value=''></option>
                         <option value="辅导员">辅导员</option>
                         <option value="实习辅导员">实习辅导员</option>
                         <option value="辅助员">辅助员</option>
-                        <option value="沙龙固定义工">沙龙固定义工</option>
+                        <option value="沙龙骨干义工">沙龙骨干义工</option>
                         <option value="其它">其它</option>
                     </select>
                 </div>
@@ -128,7 +132,7 @@ if ($salon) {
                     <label for="food">用餐<span class="red">*</span></label>
                     <input type="checkbox" class="autowidth food" name="food[]" value="12日午餐"/> <span class="left">12日午餐</span>
                     <input type="checkbox" class="autowidth food" name="food[]" value="12日晚餐"/> <span class="left">12日晚餐</span>
-                    <input type="checkbox" class="autowidth food" name="food[]" value="13日晚餐"/> <span class="left">13日晚餐</span>
+                    <input type="checkbox" class="autowidth food" name="food[]" value="13日午餐"/> <span class="left">13日午餐</span>
                     <input type="checkbox" class="autowidth" id="nofood" name="food[]" value="不用餐" checked="checked"/>
                     <span class="left">不用餐</span>
                 </div>

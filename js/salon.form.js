@@ -60,6 +60,14 @@
 					var val = formData[i].value;
 					switch(formData[i].name)
 					{
+						case 'area':
+							if (val.length < 2 )
+								errors.push('请选择修学处');
+							break;
+						case 'city':
+							if (val.length < 2 )
+								errors.push('请填写地区');
+							break;
 						case 'name':
 							if (val.length < 2 )
 								errors.push('姓名太短');
@@ -73,7 +81,17 @@
 								parseInt(val)<=0 ||parseInt(val) > 200 )
 								errors.push('请填写1-200以内的班级编号');
 							break;
+						case 'gender':
+							if (val.length < 1 )
+								errors.push('选择性别');
+							break;
+						case 'classtype':
+							if (val.length < 1 )
+								errors.push('请选择班级类型');
+							break;
 						case 'position':
+							if (val.length < 1 )
+								errors.push('请填写义工岗位');
 							if (val=="其它") {
 								need_other_position=true;
 							}
@@ -96,7 +114,7 @@
 
 				return true;
 			},
-			success: function(responseText){
+			success: function(responseText,jqform){
 				try{
 					var data = JSON.parse(responseText);
 					if (data.message)
@@ -107,8 +125,12 @@
 					else{
 						if (data.redirect){
 							window.location.href = data.redirect;
-						}
+						}else
+							window.location = window.location;
 					}
+
+
+
 				}
 				catch(e){
 					alert(e.description);
