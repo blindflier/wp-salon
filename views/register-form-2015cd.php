@@ -25,7 +25,7 @@ if ($salon) {
     wp_enqueue_script('salon-form');
     ?>
     <div class="salon-register-container">
-        <form class="salon-register-form" id="training-register-form" action="" method="post">
+        <form class="training-register-form" id="training-register-form" action="" method="post">
             <section>
                 <h1>培训报名</h1>
                 <input type="hidden" name="_wpnonce" value="<?php echo wp_create_nonce('salon-register'); ?>">
@@ -133,7 +133,7 @@ if ($salon) {
                 </div>
 
                 <div class="form-group row">
-                    <label for="lodge">住宿<span class="red">*</span></label>
+                    <label for="lodge" class="sm-full">住宿<span class="red">*</span></label>
                     <input type="checkbox" class="autowidth lodge" name="lodge[]" id="lodge1" value="11日晚"/> <span
                         class="left" onclick="toggleCheckbox('lodge1');">11日晚</span>
                     <input type="checkbox" class="autowidth lodge" name="lodge[]" id="lodge2" value="12日晚"/> <span
@@ -145,12 +145,12 @@ if ($salon) {
                 </div>
 
                 <div class="form-group row">
-                    <label for="food">用餐<span class="red">*</span></label>
-                    <input type="checkbox" class="autowidth food" name="food[]" value="12日午餐" id="food1"/> <span onclick="toggleCheckbox('food1');" class="left">12日午餐</span>
-                    <input type="checkbox" class="autowidth food" name="food[]" value="12日晚餐" id="food2"/> <span onclick="toggleCheckbox('food2');" class="left">12日晚餐</span>
-                    <input type="checkbox" class="autowidth food" name="food[]" value="13日午餐" id="food3"/> <span onclick="toggleCheckbox('food3');" class="left">13日午餐</span>
+                    <label for="food" class="sm-full">用餐<span class="red">*</span></label>
+                    <input type="checkbox" class="autowidth food" name="food[]" value="12日午餐" id="food1"/> <span onclick="toggleCheckbox('food1');" class="left sm-break">12日午餐</span>
+                    <input type="checkbox" class="autowidth food" name="food[]" value="12日晚餐" id="food2"/> <span onclick="toggleCheckbox('food2');" class="left sm-break">12日晚餐</span>
+                    <input type="checkbox" class="autowidth food" name="food[]" value="13日午餐" id="food3"/> <span onclick="toggleCheckbox('food3');" class="left sm-break">13日午餐</span>
                     <input type="checkbox" class="autowidth" id="nofood" name="food[]" value="不用餐" id="food4"/>
-                    <span class="left" onclick="toggleCheckbox('nofood');">不用餐</span>
+                    <span class="left sm-break" onclick="toggleCheckbox('nofood');">不用餐</span>
                 </div>
 
                 <div class="form-group row">
