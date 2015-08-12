@@ -104,14 +104,15 @@
 					var data = JSON.parse(responseText);
 					if (data.message)
 						alert(data.message);
-
-					if($("#redirect_url").val())
-						window.location.href = $("#redirect_url").val();
-					else{
-						if (data.redirect){
-							window.location.href = data.redirect;
-						}else
-							window.location = window.location;
+					if (data.success) {
+						if ($("#redirect_url").val())
+							window.location.href = $("#redirect_url").val();
+						else {
+							if (data.redirect) {
+								window.location.href = data.redirect;
+							} else
+								window.location = window.location;
+						}
 					}
 
 

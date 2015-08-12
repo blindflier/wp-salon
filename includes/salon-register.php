@@ -26,7 +26,7 @@ function salon_checkForRegister() {
 
 function _json_die($data){
 	if (is_string($data))
-		die(json_encode(array('message'=>$data)));
+		die(json_encode(array('success'=>false,'message'=>$data)));
 	else
 		die(json_encode($data));
 }
@@ -256,7 +256,7 @@ function _training_register(){
 		}
 		wp_update_post(array('ID'=>$post_id, 'post_title' => $post_title . '(' . $_POST['name'] . ')'));
 
-		$ret = array('id'=>$post_id);
+		$ret = array('id'=>$post_id,'success'=>true);
 		if ($max_audience > 0 &&  _get_salon_register_count($salon->ID) > $max_audience )
 			$ret['message'] = '报名人数已满，您的信息已经被保存，请等待短信或邮件通知!';
 		else
