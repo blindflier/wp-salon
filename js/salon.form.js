@@ -88,21 +88,7 @@
 							if (val.length < 1 )
 								errors.push('请选择班级类型');
 							break;
-						case 'position':
-							if (val.length < 1 )
-								errors.push('请填写义工岗位');
-							if (val=="其它") {
-								need_other_position=true;
-							}
-							break;
-						case 'other_position':
-							if (need_other_position && val.length < 2)
-								errors.push('请填写义工岗位');
-							break;
-						case 'idcode':
-							if (!val.match(/^\d{17}\w$/))
-								errors.push('请填写有效身份证号码');
-							break;
+
 
 					}
 				}

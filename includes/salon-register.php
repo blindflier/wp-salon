@@ -195,14 +195,14 @@ function _check_training_data(){
 		$invalid[] = '电子邮箱';
 	}
 	//身份证
-	if (empty($_POST['idcode']) || !preg_match('/^\d{17}\w$/', $_POST['idcode'])){
-		$invalid[] = '身份证';
-	}
+	//if (empty($_POST['idcode']) || !preg_match('/^\d{17}\w$/', $_POST['idcode'])){
+	//	$invalid[] = '身份证';
+	//}
 	//义工岗位
-	if (empty($_POST['position']) ||
-		($_POST['position']=="其它" && empty($_POST['other_position']))){
-		$invalid[] = '义工岗位';
-	}
+	//if (empty($_POST['position']) ||
+	//	($_POST['position']=="其它" && empty($_POST['other_position']))){
+	//	$invalid[] = '义工岗位';
+	//}
 	return $invalid;
 }
 

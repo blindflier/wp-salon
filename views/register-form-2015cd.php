@@ -36,7 +36,7 @@ if ($salon) {
 
             </section>
 
-            <div class="lg-80">
+            <div class="lg-80" style="padding-top:1em">
                 <div class="row form-group">
                     <label for="area">修学处<span class="red">*</span></label>
                     <select name="area" id="area" required>
@@ -51,7 +51,9 @@ if ($salon) {
 
                 <div class="row form-group">
                     <label for="city" class="">地区<span class="red">*</span></label>
-                    <input type="text" id="city" name="city" required>
+                    <select name="city" id="city" required>
+
+                    </select>
                 </div>
                 <div class="row form-group">
                     <label for="classtype" class="">班级类型<span class="red">*</span></label>
@@ -59,7 +61,6 @@ if ($salon) {
                         <option selected disabled hidden value=''></option>
                         <option value="同喜">同喜</option>
                         <option value="同修">同修</option>
-                        <option value="同德">同德</option>
                     </select>
 
                 </div>
@@ -103,12 +104,18 @@ if ($salon) {
 
 
                 <div class="form-group row">
-                    <label for="position">义工岗位<span class="red">*</span></label>
-                    <select name="position" id="position" required>
-                        <option selected disabled hidden value=''></option>
+                    <label for="fd_position">辅导义工岗位<span class="red">*</span></label>
+                    <select name="fd_position">
                         <option value="辅导员">辅导员</option>
                         <option value="实习辅导员">实习辅导员</option>
                         <option value="辅助员">辅助员</option>
+                        <option value="无" selected="selected">无</option>
+                    </select>
+                </div>
+
+                <div class="form-group row">
+                    <label for="cd_position">传灯义工岗位<span class="red">*</span></label>
+                    <select name="cd_position" >
                         <option value="沙龙组组长">沙龙组组长</option>
                         <option value="沙龙组副组长">沙龙组副组长</option>
                         <option value="沙龙点负责人">沙龙点负责人</option>
@@ -118,19 +125,16 @@ if ($salon) {
                         <option value="传灯执事">传灯执事</option>
                         <option value="传灯知事">传灯知事</option>
                         <option value="传灯干事">传灯干事</option>
-                        <option value="其它">其它</option>
+                        <option value="无" selected="selected">无</option>
                     </select>
                 </div>
 
-                <div class="form-group row " style="display: none" id="other-position">
-                    <label for="memo">其它岗位<span class="red">*</span></label>
+                <div class="form-group row" id="other-position">
+                    <label for="other_position">其它义工岗位</label>
                     <input type="text" class="form-control" name="other_position">
                 </div>
 
-                <div class="form-group row">
-                    <label for="idcode">身份证号码<span class="red">*</span></label>
-                    <input type="text" class="form-control" name="idcode" required>
-                </div>
+
 
                 <div class="form-group row">
                     <label for="lodge" class="sm-full">住宿<span class="red">*</span></label>
@@ -164,9 +168,9 @@ if ($salon) {
     </div>
 
     <script>
-        $('#position').bind('change', function (e) {
-            $(this).attr('value') == "其它" ? $('#other-position').show() : $('#other-position').hide();
-        });
+
+
+
 
         $('#area').bind('change', function (e) {
             $('#city').attr('value', $(this).attr('value'));
@@ -205,5 +209,18 @@ if ($salon) {
             elem.trigger("change");
         }
 
+        var cities =  ['上海','杭州','靖江','哈尔滨','鸡西','义乌','宝鸡',
+            '佛山','北京','南京','合肥','淮南','凤台','镇江','扬州',
+            '苏州','常州','徐州','泰安','无锡','厦门','福安',
+            '福州','广州','深圳','温州','龙岩','漳州','景德镇',
+            '永安','泉州'
+        ];
+        $(document).ready(function(){
+            $('#city').append('<option selected disabled hidden value=""></option>');
+            for(var i=0;i<cities.length;i++){
+                $('#city').append('<option value="'+ cities[i] +'">'+cities[i]+'</option>');
+            }
+
+        });
     </script>
 <?php endif; ?>
