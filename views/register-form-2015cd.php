@@ -67,7 +67,13 @@ if ($salon) {
                 <div class="row form-group">
                     <label for="classseq" class="">班级编号<span class="red">*</span></label>
 
-                    <input type="number" name="classseq" min="1" max="200" required/>
+                    <select name="classseq" id="classseq" required>
+                        <option selected disabled hidden value=''></option>
+                        <script>
+                            for(var i=1; i<=100 ; i++)
+                                document.write('<option value="'+i+'">'+i+'</option>');
+                        </script>
+                    </select>
                 </div>
 
                 <div class="row form-group">
@@ -103,7 +109,15 @@ if ($salon) {
                         <option value="辅导员">辅导员</option>
                         <option value="实习辅导员">实习辅导员</option>
                         <option value="辅助员">辅助员</option>
-                        <option value="沙龙骨干义工">沙龙骨干义工</option>
+                        <option value="沙龙组组长">沙龙组组长</option>
+                        <option value="沙龙组副组长">沙龙组副组长</option>
+                        <option value="沙龙点负责人">沙龙点负责人</option>
+                        <option value="沙龙固定义工">沙龙固定义工</option>
+                        <option value="沙龙护持义工">沙龙护持义工</option>
+                        <option value="沙龙分享义工">沙龙分享义工</option>
+                        <option value="传灯执事">传灯执事</option>
+                        <option value="传灯知事">传灯知事</option>
+                        <option value="传灯干事">传灯干事</option>
                         <option value="其它">其它</option>
                     </select>
                 </div>
@@ -124,6 +138,8 @@ if ($salon) {
                         class="left" onclick="toggleCheckbox('lodge1');">11日晚</span>
                     <input type="checkbox" class="autowidth lodge" name="lodge[]" id="lodge2" value="12日晚"/> <span
                         class="left" onclick="toggleCheckbox('lodge2');">12日晚</span>
+                    <input type="checkbox" class="autowidth lodge" name="lodge[]" id="lodge3" value="13日晚"/> <span
+                        class="left" onclick="toggleCheckbox('lodge3');">13日晚</span>
                     <input type="checkbox" class="autowidth" id="nolodge" name="lodge[]"  value="不住宿" /> <span
                         class="left" onclick="toggleCheckbox('nolodge');">不住宿</span>
                 </div>

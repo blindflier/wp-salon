@@ -77,9 +77,8 @@
 								errors.push('请填写1开头的11位有效手机号码');
 							break;
 						case 'classseq':
-							if (!val.match(/^\d+$/) ||
-								parseInt(val)<=0 ||parseInt(val) > 200 )
-								errors.push('请填写1-200以内的班级编号');
+							if (!val.match(/^\d+$/)  )
+								errors.push('请选择班级编号');
 							break;
 						case 'gender':
 							if (val.length < 1 )
