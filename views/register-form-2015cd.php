@@ -120,21 +120,21 @@ if ($salon) {
 
                 <div class="form-group row">
                     <label for="lodge">住宿<span class="red">*</span></label>
-                    <input type="checkbox" class="autowidth lodge" name="lodge[]" value="11日晚"/> <span
-                        class="left">11日晚</span>
-                    <input type="checkbox" class="autowidth lodge" name="lodge[]" value="12日晚"/> <span
-                        class="left">12日晚</span>
-                    <input type="checkbox" class="autowidth" id="nolodge" name="lodge[]" value="不住宿" /> <span
-                        class="left">不住宿</span>
+                    <input type="checkbox" class="autowidth lodge" name="lodge[]" id="lodge1" value="11日晚"/> <span
+                        class="left" onclick="toggleCheckbox('lodge1');">11日晚</span>
+                    <input type="checkbox" class="autowidth lodge" name="lodge[]" id="lodge2" value="12日晚"/> <span
+                        class="left" onclick="toggleCheckbox('lodge2');">12日晚</span>
+                    <input type="checkbox" class="autowidth" id="nolodge" name="lodge[]"  value="不住宿" /> <span
+                        class="left" onclick="toggleCheckbox('nolodge');">不住宿</span>
                 </div>
 
                 <div class="form-group row">
                     <label for="food">用餐<span class="red">*</span></label>
-                    <input type="checkbox" class="autowidth food" name="food[]" value="12日午餐"/> <span class="left">12日午餐</span>
-                    <input type="checkbox" class="autowidth food" name="food[]" value="12日晚餐"/> <span class="left">12日晚餐</span>
-                    <input type="checkbox" class="autowidth food" name="food[]" value="13日午餐"/> <span class="left">13日午餐</span>
-                    <input type="checkbox" class="autowidth" id="nofood" name="food[]" value="不用餐" />
-                    <span class="left">不用餐</span>
+                    <input type="checkbox" class="autowidth food" name="food[]" value="12日午餐" id="food1"/> <span onclick="toggleCheckbox('food1');" class="left">12日午餐</span>
+                    <input type="checkbox" class="autowidth food" name="food[]" value="12日晚餐" id="food2"/> <span onclick="toggleCheckbox('food2');" class="left">12日晚餐</span>
+                    <input type="checkbox" class="autowidth food" name="food[]" value="13日午餐" id="food3"/> <span onclick="toggleCheckbox('food3');" class="left">13日午餐</span>
+                    <input type="checkbox" class="autowidth" id="nofood" name="food[]" value="不用餐" id="food4"/>
+                    <span class="left" onclick="toggleCheckbox('nofood');">不用餐</span>
                 </div>
 
                 <div class="form-group row">
@@ -182,7 +182,11 @@ if ($salon) {
 
         });
 
-
+        function toggleCheckbox(id){
+            var elem = $('#'+id);
+            var c = !!elem.attr('checked');
+            elem.attr('checked',!c);
+        }
 
     </script>
 <?php endif; ?>
