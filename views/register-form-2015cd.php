@@ -202,6 +202,7 @@ if ($salon) {
             var elem = $('#'+id);
             var c = !!elem.attr('checked');
             elem.attr('checked',!c);
+            elem.trigger("change");
         }
 
     </script>
