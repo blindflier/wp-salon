@@ -40,7 +40,7 @@ if ($salon) {
                 <div class="row form-group">
                     <label for="area">修学处<span class="red">*</span></label>
                     <select name="area" id="area" required>
-                        <option selected disabled hidden value=''></option>
+                        <option selected disabled hidden value=''>请选择修学处</option>
                         <option value="上海">上海</option>
                         <option value="厦门">厦门</option>
                         <option value="苏州">苏州</option>
@@ -58,7 +58,7 @@ if ($salon) {
                 <div class="row form-group">
                     <label for="classtype" class="">班级类型<span class="red">*</span></label>
                     <select name="classtype" required>
-                        <option selected disabled hidden value=''></option>
+                        <option selected disabled hidden value=''>请选择班级类型</option>
                         <option value="同喜">同喜</option>
                         <option value="同修">同修</option>
                     </select>
@@ -68,8 +68,8 @@ if ($salon) {
                 <div class="row form-group">
                     <label for="classseq" class="">班级编号<span class="red">*</span></label>
 
-                    <select name="classseq" id="classseq" required>
-                        <option selected disabled hidden value=''></option>
+                    <select name="classseq" id="classseq" placeholder="请选择班级编号" required>
+                        <option selected disabled hidden value=''>请选择班级编号</option>
                         <script>
                             for(var i=1; i<=100 ; i++)
                                 document.write('<option value="'+i+'">'+i+'</option>');
@@ -79,34 +79,34 @@ if ($salon) {
 
                 <div class="row form-group">
                     <label for="city" class="">姓名<span class="red">*</span></label>
-                    <input type="text" name="name" required>
+                    <input type="text" name="name" placeholder="请输入姓名" required>
                 </div>
                 <div class="row form-group">
                     <label for="bodhi_name">法名</label>
-                    <input type="text" class="form-control" name="bodhi_name" maxlength="3">
+                    <input type="text" class="form-control" name="bodhi_name" maxlength="3" placeholder="请输入法名">
                 </div>
                 <div class="form-group row">
                     <label for="gender">性别<span class="red">*</span></label>
                     <select name="gender" class="form-control">
-                        <option selected disabled hidden value=''></option>
+                        <option selected disabled hidden value=''>请选择性别</option>
                         <option value="男">男</option>
                         <option value="女"">女</option>
                     </select>
                 </div>
                 <div class="form-group row">
                     <label for="mobile">手机<span class="red">*</span></label>
-                    <input type="text" class="form-control" name="mobile" required>
+                    <input type="text" class="form-control" name="mobile" placeholder="请输入手机" required>
                 </div>
                 <div class="form-group row">
                     <label for="email">邮箱<span class="red">*</span></label>
-                    <input type="email" class="form-control" name="email" required="">
+                    <input type="email" class="form-control" name="email" placeholder="请输入邮箱" required="">
                 </div>
 
 
                 <div class="form-group row">
                     <label for="fd_position">辅导义工岗位<span class="red">*</span></label>
                     <select name="fd_position" required>
-                        <option selected disabled hidden value=''></option>
+                        <option selected disabled hidden value=''>请选择辅导义工岗位</option>
                         <option value="辅导员">辅导员</option>
                         <option value="实习辅导员">实习辅导员</option>
                         <option value="辅助员">辅助员</option>
@@ -117,7 +117,7 @@ if ($salon) {
                 <div class="form-group row">
                     <label for="cd_position">传灯义工岗位<span class="red">*</span></label>
                     <select name="cd_position" required >
-                        <option selected disabled hidden value=''></option>
+                        <option selected disabled hidden value=''>请选择传灯义工岗位</option>
                         <option value="沙龙组组长">沙龙组组长</option>
                         <option value="沙龙组副组长">沙龙组副组长</option>
                         <option value="沙龙点负责人">沙龙点负责人</option>
@@ -133,12 +133,12 @@ if ($salon) {
 
                 <div class="form-group row" id="other-position">
                     <label for="other_position">其它义工岗位</label>
-                    <input type="text" class="form-control" name="other_position">
+                    <input type="text" class="form-control" placeholder="请输入其它义工岗位" name="other_position">
                 </div>
 
 
 
-                <div class="form-group row">
+                <div class="form-group row checkbox">
                     <label for="lodge" class="sm-full">住宿<span class="red">*</span></label>
                     <input type="checkbox" class="autowidth lodge" name="lodge[]" id="lodge1" value="11日晚"/> <span
                         class="left" onclick="toggleCheckbox('lodge1');">11日晚</span>
@@ -150,7 +150,7 @@ if ($salon) {
                         class="left" onclick="toggleCheckbox('nolodge');">不住宿</span>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row checkbox">
                     <label for="food" class="sm-full">用餐<span class="red">*</span></label>
                     <input type="checkbox" class="autowidth food" name="food[]" value="12日午餐" id="food1"/> <span onclick="toggleCheckbox('food1');" class="left sm-break">12日午餐</span>
                     <input type="checkbox" class="autowidth food" name="food[]" value="12日晚餐" id="food2"/> <span onclick="toggleCheckbox('food2');" class="left sm-break">12日晚餐</span>
@@ -176,6 +176,7 @@ if ($salon) {
 
         $('#area').bind('change', function (e) {
             $('#city').attr('value', $(this).attr('value'));
+            $('#city').trigger('change');
         });
 
         $('#nofood').bind('change',function(e){
@@ -203,6 +204,9 @@ if ($salon) {
             }
 
         });
+        $('select').bind('change',function(){
+            $(this).css('color','#666');
+        });
 
         function toggleCheckbox(id){
             var elem = $('#'+id);
@@ -218,7 +222,7 @@ if ($salon) {
             '永安','泉州'
         ];
         $(document).ready(function(){
-            $('#city').append('<option selected disabled hidden value=""></option>');
+            $('#city').append('<option selected disabled hidden value="">请选择地区</option>');
             for(var i=0;i<cities.length;i++){
                 $('#city').append('<option value="'+ cities[i] +'">'+cities[i]+'</option>');
             }
