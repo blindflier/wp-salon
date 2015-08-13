@@ -105,17 +105,19 @@ if ($salon) {
 
                 <div class="form-group row">
                     <label for="fd_position">辅导义工岗位<span class="red">*</span></label>
-                    <select name="fd_position">
+                    <select name="fd_position" required>
+                        <option selected disabled hidden value=''></option>
                         <option value="辅导员">辅导员</option>
                         <option value="实习辅导员">实习辅导员</option>
                         <option value="辅助员">辅助员</option>
-                        <option value="无" selected="selected">无</option>
+                        <option value="无">无</option>
                     </select>
                 </div>
 
                 <div class="form-group row">
                     <label for="cd_position">传灯义工岗位<span class="red">*</span></label>
-                    <select name="cd_position" >
+                    <select name="cd_position" required >
+                        <option selected disabled hidden value=''></option>
                         <option value="沙龙组组长">沙龙组组长</option>
                         <option value="沙龙组副组长">沙龙组副组长</option>
                         <option value="沙龙点负责人">沙龙点负责人</option>
@@ -125,7 +127,7 @@ if ($salon) {
                         <option value="传灯执事">传灯执事</option>
                         <option value="传灯知事">传灯知事</option>
                         <option value="传灯干事">传灯干事</option>
-                        <option value="无" selected="selected">无</option>
+                        <option value="无">无</option>
                     </select>
                 </div>
 
@@ -142,7 +144,7 @@ if ($salon) {
                         class="left" onclick="toggleCheckbox('lodge1');">11日晚</span>
                     <input type="checkbox" class="autowidth lodge" name="lodge[]" id="lodge2" value="12日晚"/> <span
                         class="left" onclick="toggleCheckbox('lodge2');">12日晚</span>
-                    <input type="checkbox" class="autowidth lodge" name="lodge[]" id="lodge3" value="13日晚"/> <span
+                    <input type="checkbox" class="autowidth lodge sm-clear" name="lodge[]" id="lodge3" value="13日晚"/> <span
                         class="left" onclick="toggleCheckbox('lodge3');">13日晚</span>
                     <input type="checkbox" class="autowidth" id="nolodge" name="lodge[]"  value="不住宿" /> <span
                         class="left" onclick="toggleCheckbox('nolodge');">不住宿</span>
@@ -152,7 +154,7 @@ if ($salon) {
                     <label for="food" class="sm-full">用餐<span class="red">*</span></label>
                     <input type="checkbox" class="autowidth food" name="food[]" value="12日午餐" id="food1"/> <span onclick="toggleCheckbox('food1');" class="left sm-break">12日午餐</span>
                     <input type="checkbox" class="autowidth food" name="food[]" value="12日晚餐" id="food2"/> <span onclick="toggleCheckbox('food2');" class="left sm-break">12日晚餐</span>
-                    <input type="checkbox" class="autowidth food" name="food[]" value="13日午餐" id="food3"/> <span onclick="toggleCheckbox('food3');" class="left sm-break">13日午餐</span>
+                    <input type="checkbox" class="autowidth food sm-clear" name="food[]" value="13日午餐" id="food3"/> <span onclick="toggleCheckbox('food3');" class="left sm-break">13日午餐</span>
                     <input type="checkbox" class="autowidth" id="nofood" name="food[]" value="不用餐" id="food4"/>
                     <span class="left sm-break" onclick="toggleCheckbox('nofood');">不用餐</span>
                 </div>

@@ -56,7 +56,10 @@
 			beforeSubmit:function(formData,jqform){
 				var errors = [];
 				var need_other_position=false;
+				var has_food=false,has_lodge=false;
+
 				for (var i=0; i < formData.length; i++) {
+
 					var val = formData[i].value;
 					switch(formData[i].name)
 					{
@@ -88,9 +91,29 @@
 							if (val.length < 1 )
 								errors.push('请选择班级类型');
 							break;
-
+						case 'fd_position':
+							if (val.length == 0 )
+								errors.push('请选择辅导义工岗位');
+							break;
+						case 'cd_position':
+							if (val.length == 0 )
+								errors.push('请选择传灯义工岗位');
+							break;
+						case 'food[]':
+							has_food=true;
+							break;
+						case 'lodge[]':
+							has_lodge=true;
+							break;
 
 					}
+				}
+
+				if (!has_food){
+					errors.push('请勾选用餐安排');
+				}
+				if (!has_lodge){
+					errors.push('请勾选住宿安排');
 				}
 				if (errors.length > 0){
 					alert(errors.join('\n'));
